@@ -1,0 +1,16 @@
+# In file: docker-compose.yml
+
+version: '3.8'
+
+services:
+  student_api:
+    build: .
+    container_name: student_api_container
+    ports:
+      - "8000:8000"
+    # Allows the container to talk to Ollama running on your host machine
+    # On Mac/Windows with Docker Desktop:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # On Linux, comment out 'extra_hosts' and uncomment the line below:
+    # network_mode: "host"
