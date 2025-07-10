@@ -41,3 +41,7 @@ This project is a simple REST API built with Python and FastAPI that performs CR
 **Create a Student:**
 ```bash
 curl -X POST "http://localhost:8000/students" -H "Content-Type: application/json" -d '{"name": "Alice", "age": 22, "email": "alice@example.com"}'
+
+Get AI Summary (for student with ID 1):
+Generated bash
+curl -X GET "http://localhost:8000/students/1/summary"
